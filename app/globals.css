@@ -2,26 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.ultrasmall {
+  @apply font-inter text-ultraxs leading-[18px] tracking-[-0.1px];
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.small {
+  @apply font-inter text-xs leading-[19px] tracking-[-0.14px];
+}
+
+.base {
+  @apply font-inter text-base leading-[24px] tracking-[-0.16px];
+}
+
+.large {
+  @apply font-inter text-lg leading-[32px] tracking-[-0.2px];
+}
+
+.xlarge {
+  @apply font-inter text-xl font-semibold leading-[24px] tracking-[-0.3px];
+}
+
+.heading {
+  @apply font-inter text-heading font-semibold leading-[40px] tracking-[-0.065ch];
+}
+
+.title {
+  @apply font-inter text-title font-bold leading-[76px] tracking-[-0.075ch];
+}
+
+.grid-background {
+  background: radial-gradient(circle at center, transparent, #f7f7f7);
+}
+
+input,
+textarea {
+  all: unset;
+}
+
+input[type="text"] {
+  word-wrap: break-word;
+  word-break: break-all;
 }
